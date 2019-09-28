@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>jQuery Document Ready Demo</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $("p").click(function(){
+                $(this).text("hello world!");
+        });
+        });
+            </script>
+    </head>
+    <body>
+        <p>Not loaded yet.</p>
+        <p>Not loaded yet.</p>
+        <p>Not loaded yet.</p>
+        <p>Not loaded yet.</p>
+    </body>
+</html>

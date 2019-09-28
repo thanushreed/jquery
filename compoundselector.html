@@ -1,0 +1,43 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> jquery select element by compound selector</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("P.mark").css("background","yellow");
+        $("#mark span").css("background","yellow");
+        $("ul li").css("background","yellow");
+        $("ul#mark li").css("background","red");
+        $("ul.mark li").css("background","green");
+        $('a[target="_blank"]').css("background","yellow");
+    });
+        </script>
+</head>
+<body>
+    <p>This is a paragraph.</p>
+    <p class="mark">This is another paragraph.</p>
+    <p>This is one more paragraph.</p>
+    <ul>
+        <li>List item one</li>
+        <li>List item two</li>
+        <li>List item three</li>
+    </ul>
+    <ul id="mark">
+        <li>List item one</li>
+        <li>List <span>item two</span></li>
+        <li>List item three</li>
+    </ul>
+    <ul class="mark">
+        <li>List item one</li>
+        <li>List item two</li>
+        <li>List item three</li>
+    </ul>
+    <br>
+    <a href="#" target="_blank">Testing Link</a><br>
+    <a href="http://www.quinnox.com" target="_self">Testing Link</a>
+    <br>
+    <a href="http://www.quinnox.com" target="popup" onclick="window.open('http://www.quinnox.com','name','width=600,height=400')">
+    Open page in new window</a>
+</body>
+</html>

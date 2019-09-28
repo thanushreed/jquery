@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Executing a function on keypress event in jquery</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <style type="text/css">
+        p{
+            padding:10px;
+            background:lightgreen;
+            display:none;
+        }
+        div{
+            margin:20px 0;
+        }
+        </style>
+        <script type="text/javascript">
+        $(document).ready(function(){
+            var i=0;
+            $('input[type="text"]').keypress(function(){
+                $("span").text(i+=1);
+                $("p").show().fadeOut();
+            });
+        });
+        </script>
+    </head>
+    <body>
+        <input type="text">
+        <div>The no. of characters typed: <span>0</span></div>
+        <div>
+            <strong> Note:</strong>Enter something inside the input box and see the result.</div>
+            <p>Keypress is triggered.</p>
+    </body>
+</html>
